@@ -25,4 +25,12 @@ export class Pagina3Page {
     console.log('ionViewDidLoad Pagina3Page');
   }
 
+  irAtras(){
+    this.navCtrl.pop();
+  }
+
+  irRoot(){
+    this.navCtrl.popToRoot();
+  }
+
 }
