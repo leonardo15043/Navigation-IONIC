@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { Pagina3Page } from '../index.paginas';
+
+
 /**
  * Generated class for the Pagina2Page page.
  *
@@ -15,11 +18,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Pagina2Page {
 
+  pagina3:any = Pagina3Page;
+
+  mutantes:any[] = [
+    
+    {
+      nombre:"Magneto",
+      poder:"Controlar metales"
+    },{
+      nombre:"Wolverine",
+      poder:"Regeneraciòn acelerada"
+    },{
+      nombre:"Profesor x",
+      poder:"Poderes psiquicos"
+    },{
+      nombre:"Gambito",
+      poder:"Cargar objetos con energia"
+    }
+    
+  ];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Pagina2Page');
+  }
+
+  irPagina3( mutante:any ){
+    this.navCtrl.push( Pagina3Page , { 'personajes':mutante } );
   }
 
 }

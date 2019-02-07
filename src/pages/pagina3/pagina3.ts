@@ -15,7 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Pagina3Page {
 
+  mutante:any = {};
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.mutante = this.navParams.get("personajes");
   }
 
   ionViewDidLoad() {
