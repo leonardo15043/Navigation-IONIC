@@ -28,7 +28,7 @@ export class PrincipalPage {
 
 
   navegarPagina(){
-    this.navCtrl.push( Pagina2Page )
+    this.navCtrl.push( Pagina2Page );
   }
 
 }
