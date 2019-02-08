@@ -22,4 +22,8 @@ export class AjustesPage {
     console.log('ionViewDidLoad AjustesPage');
   }
 
+  activarPrincipal(){
+    this.navCtrl.parent.select(0);
+  }
+
 }
